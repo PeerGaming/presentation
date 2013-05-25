@@ -17,7 +17,7 @@ a:hover{ border-bottom: 2px solid #20605A; }
 
 figure > a { border-bottom: none !important; }
 
-/*figure > figurecaption { font-size: 1.5rem; }*/
+figure > figurecaption { color: #aaa; }
 
 pre { font-size: 1rem; }
 
@@ -44,8 +44,6 @@ img {
 
 
 
-
-
 /**
  *  Outside
  */
@@ -57,7 +55,6 @@ body {
   font-family     : 'Noto Serif', serif;
   font-size       : 1rem;
 }
-
 
 
 
@@ -155,6 +152,8 @@ body {
 
 .step { visibility: hidden; }
 
+.step-prev { color: #999; }
+
 
 
 /**
@@ -168,7 +167,7 @@ pre[class*="language-"] {
   border-radius: 0.5em;
 }
 
-
+.pos-code { margin-top: 50px; }
 
 
 /**

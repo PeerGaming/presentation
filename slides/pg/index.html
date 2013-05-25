@@ -141,14 +141,13 @@
   </div>
 
 
-
   <div class="pikSlide">
 
     <p class="category"><span class="js-slide-no"></span> Motivation</p>
 
     <div class="flex-container">
 
-      <p>people interact</p>
+      <p class="step-prev">people interact</p>
 
       <span aria-hidden="true" data-icon="&#xf063;"></span>
 
@@ -187,14 +186,13 @@
   </div>
 
 
-
   <div class="pikSlide">
 
     <p class="category"><span class="js-slide-no"></span> Problem</p>
 
     <div class="flex-container">
 
-      <p>gamers - limited selection</p>
+      <p class="step-prev">gamers - limited selection</p>
 
       <p>devs <span class="problem">-</span> complex setup</p>
 
@@ -208,6 +206,7 @@
 
   <!--  -->
 
+
   <div class="pikSlide">
 
     <p class="category"><span class="js-slide-no"></span> Solution</p>
@@ -217,13 +216,12 @@
       <blockquote>
         <p>Creating a Client-Side Multiplayer Gaming Framework for the Web,
            which handles Distributed Logic on Multiple Systems in "Real-Time".</p>
-        <cite>- Stefan Dühring (bachelor thesis)</cite>
       </blockquote>
 
     </div>
 
     <div class="pikNotes">
-      <p>submit in july</p>
+      <p>spirit of the #noBackend movement - submit in july</p>
     </div>
 
   </div>
@@ -268,7 +266,7 @@
 
     <div class="flex-container">
 
-      <p>DOM - Canvas - WebGL</p>
+      <p class="step-prev">DOM - Canvas - WebGL</p>
 
       <p>Mobile Market</p>
 
@@ -311,14 +309,14 @@
 
     <div class="flex-container">
 
-      <p>WebSockets or XHR-Polling</p>
+      <p class="step-prev">WebSockets or XHR-Polling</p>
 
       <p>Client-Server Architecture</p>
 
     </div>
 
     <div class="pikNotes">
-      <p>require another system - technologie - costs</p>
+      <p>additional costs - require another system - technology - maintenance</p>
     </div>
 
   </div>
@@ -331,7 +329,7 @@
 
   <div class="flex-container">
 
-    <p class="title"><span class="js-slide-no"></span> Innovation</p>
+    <p class="title"><span class="js-slide-no"></span> Evolution</p>
 
   </div>
 
@@ -341,7 +339,7 @@
 
   <div class="pikSlide">
 
-      <p class="category"><span class="js-slide-no"></span> Evolution</p>
+      <p class="category"><span class="js-slide-no"></span> Shift</p>
 
       <div class="flex-container">
 
@@ -436,13 +434,13 @@
       <h3><a href="http://www.webrtc.org/">WebRTC</a></h3>
 
       <ul class="arrow-list">
-        <li><span aria-hidden="true" data-icon="&#xe002;"></span></li>
+        <li class="step-prev"><span aria-hidden="true" data-icon="&#xe002;"></span></li>
         <li><span aria-hidden="true" data-icon="&#xe001;"></span></li>
         <li class="step"><span aria-hidden="true" data-icon="&#xe000;"></span></li>
       </ul>
 
       <ul class="component-list">
-        <li><a href="http://docs.webplatform.org/wiki/apis/webrtc/RTCPeerConnection#Summary">PeerConnection</a></li>
+        <li><a class="step-prev" href="http://docs.webplatform.org/wiki/apis/webrtc/RTCPeerConnection#Summary">PeerConnection</a></li>
         <li><a href="http://docs.webplatform.org/wiki/apis/webrtc/MediaStream#Summary">MediaStream</a></li>
         <li class="step"><a href="http://docs.webplatform.org/wiki/apis/webrtc/RTCDataChannel#Summary">DataChannel</a></li>
       </ul>
@@ -467,14 +465,14 @@
       <h3><a href="http://www.webrtc.org/">WebRTC</a></h3>
 
       <ul class="arrow-list">
-        <li><span aria-hidden="true" data-icon="&#xe002;"></span></li>
-        <li><span aria-hidden="true" data-icon="&#xe001;"></span></li>
+        <li class="step-prev"><span aria-hidden="true" data-icon="&#xe002;"></span></li>
+        <li class="step-prev"><span aria-hidden="true" data-icon="&#xe001;"></span></li>
         <li><span aria-hidden="true" data-icon="&#xe000;"></span></li>
       </ul>
 
       <ul class="component-list">
-        <li><a href="http://docs.webplatform.org/wiki/apis/webrtc/RTCPeerConnection#Summary">PeerConnection</a></li>
-        <li><a href="http://docs.webplatform.org/wiki/apis/webrtc/MediaStream#Summary">MediaStream</a></li>
+        <li><a class="step-prev" href="http://docs.webplatform.org/wiki/apis/webrtc/RTCPeerConnection#Summary">PeerConnection</a></li>
+        <li><a class="step-prev" href="http://docs.webplatform.org/wiki/apis/webrtc/MediaStream#Summary">MediaStream</a></li>
         <li><a href="http://docs.webplatform.org/wiki/apis/webrtc/RTCDataChannel#Summary">DataChannel</a></li>
       </ul>
 
@@ -524,47 +522,87 @@
 </div>
 
 
-  <div class="pikSlide">
-
-    <p class="js-slide-no"></p>
-    <p class="category">Network</p>
-
-    <div class="flex-container">
-
-      <p>Peerlist (Server)</p>
-
-      <p class="step">PeerRouting (P2P)</p>
-
-      <p class="step"><i>** manual **</i></p>
-
-    </div>
-
-    <div class="pikNotes">
-      <p>user get IDs - automatic brookering - pick a fitting partner depending</p>
-    </div>
-
-  </div>
-
-
-
 
   <div class="pikSlide">
 
     <p class="js-slide-no"></p>
-    <p class="category">Network</p>
+    <p class="category">Components</p>
 
     <div class="flex-container">
 
-      <p>Peerlist (Server)</p>
+      <div class="pos-code">
+        <pre><code class="language-javascript">
 
-      <p>PeerRouting (P2P)</p>
+        /** API Overview **/
 
-      <p class="step"><i>** manual **</i></p>
+        var pg = {
+
+          noConflict    : fn  - 'reset namespace'
+          VERSION       : obj - 'refers to the current version'
+          info          : obj - 'information about the state'
+
+
+          // config     : fn  - 'configuration for the network'
+          // login      : fn  - 'set identifier and create player'
+          // player     : obj - 'own user instance (writeable)'
+          // peers      : obj - 'list of connected players (readable)'
+          // data       : arr - 'shortcut to access peers.data + player.data'
+          // loop       : fn  - 'synchronized rendering process'
+          // channel    : fn  - 'handler for a "Channel"'
+          // game       : fn  - 'handler for a "Game"'
+          // routes     : fn  - 'define default and custom routes'
+        };
+        </code></pre>
+      </div>
 
     </div>
 
     <div class="pikNotes">
-      <p>after initial connection - other peers are proxies - as 1:1 topology</p>
+      <p>information - misc</p>
+    </div>
+
+  </div>
+
+
+
+
+
+  <div class="pikSlide">
+
+    <p class="js-slide-no"></p>
+    <p class="category">Components</p>
+
+    <div class="flex-container">
+
+      <div class="pos-code">
+        <pre><code class="language-javascript">
+
+        /** API Overview **/
+
+        var pg = {
+
+          // noConflict : fn  - 'reset namespace'
+          // VERSION    : obj - 'refers to the current version'
+          // info       : obj - 'information about the state'
+
+          config        : fn  - 'configuration for the network'
+          login         : fn  - 'set identifier and create player'
+
+          // player     : obj - 'own user instance (writeable)'
+          // peers      : obj - 'list of connected players (readable)'
+          // data       : arr - 'shortcut to access peers.data + player.data'
+          // loop       : fn  - 'synchronized rendering process'
+          // channel    : fn  - 'handler for a "Channel"'
+          // game       : fn  - 'handler for a "Game"'
+          // routes     : fn  - 'define default and custom routes'
+        };
+        </code></pre>
+      </div>
+
+    </div>
+
+    <div class="pikNotes">
+      <p>options - internal settings</p>
     </div>
 
   </div>
@@ -573,25 +611,117 @@
 
   <div class="pikSlide">
 
-    <p class="category"><span class="js-slide-no"></span> Network</p>
+    <p class="js-slide-no"></p>
+    <p class="category">Components</p>
 
     <div class="flex-container">
 
-      <p>Peerlist (Server)</p>
+      <div class="pos-code">
+        <pre><code class="language-javascript">
 
-      <p>PeerRouting (P2P)</p>
+        /** API Overview **/
 
-      <p><i>** manual **</i></p>
+        var pg = {
+
+          // noConflict : fn  - 'reset namespace'
+          // VERSION    : obj - 'refers to the current version'
+          // info       : obj - 'information about the state'
+          // config     : fn  - 'configuration for the network'
+          // login      : fn  - 'set identifier and create player'
+
+          player        : obj - 'own user instance (writeable)'
+          peers         : obj - 'list of connected players (readable)'
+          data          : arr - 'shortcut to access peers.data + player.data'
+          loop          : fn  - 'synchronized rendering process'
+
+          // channel    : fn  - 'handler for a "Channel"'
+          // game       : fn  - 'handler for a "Game"'
+          // routes     : fn  - 'define default and custom routes'
+        };
+        </code></pre>
+      </div>
 
     </div>
 
     <div class="pikNotes">
-      <p>complete serverless - handle credentials exchange by the user - 3rd party transport</p>
+      <p>game elements</p>
     </div>
 
   </div>
 
-  <!--  -->
+
+
+  <div class="pikSlide">
+
+    <p class="category"><span class="js-slide-no"></span> Components</p>
+
+    <div class="flex-container">
+
+      <div class="pos-code">
+        <pre><code class="language-javascript">
+
+        /** API Overview **/
+
+        var pg = {
+
+          // noConflict : fn  - 'reset namespace'
+          // VERSION    : obj - 'refers to the current version'
+          // info       : obj - 'information about the state'
+          // config     : fn  - 'configuration for the network'
+          // login      : fn  - 'set identifier and create player'
+          // player     : obj - 'own user instance (writeable)'
+          // peers      : obj - 'list of connected players (readable)'
+          // data       : arr - 'shortcut to access peers.data + player.data'
+          // loop       : fn  - 'synchronized rendering process'
+
+
+          channel       : fn  - 'handler for a "Channel"'
+          game          : fn  - 'handler for a "Game"'
+          routes        : fn  - 'define default and custom routes'
+        };
+        </code></pre>
+      </div>
+
+    </div>
+
+    <div class="pikNotes">
+      <p>meta - rooms</p>
+    </div>
+
+  </div>
+
+
+
+
+  <div class="pikSlide">
+
+    <p class="js-slide-no"></p>
+    <p class="category">Meta</p>
+
+    <div class="flex-container">
+
+      <p>Account</p>
+
+      <pre><code class="language-javascript">
+
+      /** define a name through user input **/
+
+      // with plain text
+      pg.login( 'Autarc' );
+
+      // with a 3rd party service via OAuth
+      pg.login( 'Autarc', 'Github' );
+
+      </code></pre>
+
+    </div>
+
+    <div class="pikNotes">
+      <p>routing specific for different rooms - accounts / OAuth ?</p>
+    </div>
+
+  </div>
+
 
 
   <div class="pikSlide">
@@ -614,6 +744,9 @@
       // example for a game
       http://peergaming.net/pg-cycle/42
 
+      // handle game events
+      pg.game( 'pg-cycle', function ( game ) { ... });
+
       </code></pre>
 
     </div>
@@ -623,6 +756,125 @@
     </div>
 
   </div>
+
+
+
+
+  <!--  -->
+  <div class="pikSlide">
+
+    <p class="js-slide-no"></p>
+    <p class="category">Network</p>
+
+    <div class="flex-container">
+
+      <p>Peerlist (Server)</p>
+
+      <pre><code class="language-javascript">
+
+      /** select a random peer for the initial connection **/
+
+      // addr: 'pg-cycle/42',
+      // id  : 'a1097e1f-4d28-4695-b7ac-0e399690040e'
+
+      function getPartner ( addr, id ) {
+
+        var keys = Object.keys( rooms[ addr ] ),
+            partnerID = null;
+
+        if ( keys.length > 1 ) partnerID = keys[~~(Math.random() * keys.length)];
+        return ( partnerID !== id ) ? partnerID : this.getPartner( addr, id );
+      }
+
+      </code></pre>
+
+    </div>
+
+    <div class="pikNotes">
+      <p>user get IDs - automatic brookering - pick a fitting partner depending</p>
+    </div>
+
+  </div>
+
+
+
+
+  <div class="pikSlide">
+
+    <p class="js-slide-no"></p>
+    <p class="category">Network</p>
+
+    <div class="flex-container">
+
+      <p>PeerRouting (P2P)</p>
+
+      <pre><code class="language-javascript">
+      /** use brokering for new connections **/
+
+      function send ( action, data ) {
+
+        var remote = this.info.remote;
+
+        // use an already known peer
+        if ( this.info.transport ) {
+          var proxy = { action: action, local: instance.id, remote: remote };
+          return this.info.transport.send( 'register', data, proxy );
+        }
+
+        // send via server
+        socket.send({ action: action, data: data, remote: remote });
+      }
+      </code></pre>
+
+    </div>
+
+    <div class="pikNotes">
+      <p>after initial connection - other peers are proxies - as 1:1 topology</p>
+    </div>
+
+  </div>
+
+
+
+  <div class="pikSlide">
+
+    <p class="category"><span class="js-slide-no"></span> Network</p>
+
+    <div class="flex-container">
+
+      <p><i>** manually **</i></p>
+
+      <pre><code class="language-javascript">
+
+      /** alternative hook for custom handling the credential exchange **/
+
+      pg.config.noServer( function( msg, conn ) {
+
+        // show own information ( iceCandidates, SDP packages )
+        document.body.innerHTML += msg.type + ':' + msg.data;
+
+        // reference to add a partners configurations
+        function setOwnCredentials( msg ) {
+          conn.set( msg.type, msg.data );
+        }
+
+      });
+
+      </code></pre>
+
+    </div>
+
+    <div class="pikNotes">
+      <p>complete serverless - handle credentials exchange by the user - 3rd party transport</p>
+    </div>
+
+  </div>
+
+  <!--  -->
+
+
+
+
 
 
 
@@ -637,7 +889,17 @@
 
       <p>Reactive Data</p>
 
-      <p class="step">Synchronized Rendering</p>
+      <pre><code class="language-javascript">
+
+        /** using getter & setter for values **/
+
+        // define internal reference
+        var player = pg.player.data;
+
+        player.posX = 1;
+        player.keys = [ 'a', 'b', 'c', 'd' ];
+
+      </code></pre>
 
     </div>
 
@@ -655,9 +917,25 @@
 
     <div class="flex-container">
 
-      <p>Reactive Data</p>
-
       <p>Synchronized Rendering</p>
+
+      <pre><code class="language-javascript">
+
+        /** automatic synchonisation **/
+
+        pg.loop( function render ( dt ) {
+
+          // define internal reference
+          var entries = pg.data;
+
+          for ( var i = 0, l = entries.length; i < l; i++ ) {
+
+            console.log( entries[i] );
+          }
+
+        });
+
+      </code></pre>
 
     </div>
 
@@ -714,7 +992,7 @@
     <div class="flex-container">
 
       <ol class="step-list">
-        <li>1.) include script tag</li>
+        <li class="step-prev">1.) include script tag</li>
         <li>2.) setup room handler</li>
         <li class="step">3.) login - create user</li>
         <li class="step">4.) initialize the game</li>
@@ -739,8 +1017,8 @@
     <div class="flex-container">
 
       <ol class="step-list">
-        <li>1.) include script tag</li>
-        <li>2.) setup room handler</li>
+        <li class="step-prev">1.) include script tag</li>
+        <li class="step-prev">2.) setup room handler</li>
         <li>3.) login - create user</li>
         <li class="step">4.) initialize the game</li>
         <li class="step">5.) use pg.loop &amp; pg.data</li>
@@ -763,9 +1041,9 @@
     <div class="flex-container">
 
       <ol class="step-list">
-        <li>1.) include script tag</li>
-        <li>2.) setup room handler</li>
-        <li>3.) login - create user</li>
+        <li class="step-prev">1.) include script tag</li>
+        <li class="step-prev">2.) setup room handler</li>
+        <li class="step-prev">3.) login - create user</li>
         <li>4.) initialize the game</li>
         <li class="step">5.) use pg.loop &amp; pg.data</li>
       </ol>
@@ -788,10 +1066,10 @@
     <div class="flex-container">
 
       <ol class="step-list">
-        <li>1.) include script tag</li>
-        <li>2.) setup room handler</li>
-        <li>3.) login - create user</li>
-        <li>4.) initialize the game</li>
+        <li class="step-prev">1.) include script tag</li>
+        <li class="step-prev">2.) setup room handler</li>
+        <li class="step-prev">3.) login - create user</li>
+        <li class="step-prev">4.) initialize the game</li>
         <li>5.) use pg.loop &amp; pg.data</li>
       </ol>
 
@@ -883,7 +1161,7 @@
 
     <div class="flex-container">
 
-      <p>standalone</p>
+      <p class="step-prev">standalone</p>
 
       <p>configurable</p>
 
@@ -906,9 +1184,9 @@
 
     <div class="flex-container">
 
-      <p>standalone</p>
+      <p class="step-prev">standalone</p>
 
-      <p>configurable</p>
+      <p class="step-prev">configurable</p>
 
       <p>simple</p>
 
@@ -954,7 +1232,7 @@
     <div class="flex-container">
 
       <ul>
-        <li>room options</li>
+        <li class="step-prev">room options</li>
         <li>audio-streams</li>
       </ul>
 
@@ -979,7 +1257,7 @@
 
       <figure>
 
-        <img src="assets/placeholder.png" height="100%" alt="Form"/>
+        <img src="assets/form.png" height="100%" alt="Form"/>
 
       </figure>
 
