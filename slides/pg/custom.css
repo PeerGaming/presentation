@@ -204,4 +204,7 @@ pre[class*="language-"] {
 .step-list > li:nth-child(5) { margin-left: 4.2rem; } /* 4.7 */
 
 
-.forum { margin-bottom: 4rem;}
+.forum    { margin-bottom: 4rem; }
+
+.topology { margin-right:  20px; }
+
