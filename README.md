@@ -4,7 +4,7 @@ An overview about [PeerGaming](https://github.com/PeerGaming/peergaming).
 
 Site: [talk.peergaming.net](http://talk.peergaming.net)
 
-_Event: Apps.BerlinJS on 30th May_
+Event: _Apps.BerlinJS on 30th May_
 
 
 ## Info

@@ -207,6 +207,25 @@
   <!--  -->
 
 
+
+  <div class="pikSlide">
+
+    <p class="category"><span class="js-slide-no"></span> Tools</p>
+
+    <div class="flex-container">
+
+      <h3><a href="http://nobackend.org/">#noBackend</a> / #yoFrontend</h3>
+
+    </div>
+
+    <div class="pikNotes">
+      <p>services - but needs to developers who help each other - tools</p>
+    </div>
+
+  </div>
+
+
+
   <div class="pikSlide">
 
     <p class="category"><span class="js-slide-no"></span> Solution</p>
@@ -487,7 +506,7 @@
 
   <!--  -->
 
-
+<!--
   <div class="pikSlide">
 
     <p class="category"><span class="js-slide-no"></span> Flow</p>
@@ -508,6 +527,27 @@
 
   </div>
 
+
+  <div class="pikSlide">
+
+    <p class="category"><span class="js-slide-no"></span> Peer-Chain</p>
+
+    <div class="flex-container">
+
+      <figure>
+
+        <img src="assets/placeholder.png" height="100%" alt="Flow"/>
+
+      </figure>
+
+    </div>
+
+    <div class="pikNotes">
+      <p>user handling - specific sequences for pg</p>
+    </div>
+
+  </div>
+ -->
 
 
 <!-- // Features, Aspects -->
@@ -547,6 +587,7 @@
           // player     : obj - 'own user instance (writeable)'
           // peers      : obj - 'list of connected players (readable)'
           // data       : arr - 'shortcut to access peers.data + player.data'
+          // sync       : obj - 'synchronized shared object'
           // loop       : fn  - 'synchronized rendering process'
           // channel    : fn  - 'handler for a "Channel"'
           // game       : fn  - 'handler for a "Game"'
@@ -591,6 +632,7 @@
           // player     : obj - 'own user instance (writeable)'
           // peers      : obj - 'list of connected players (readable)'
           // data       : arr - 'shortcut to access peers.data + player.data'
+          // sync       : obj - 'synchronized shared object'
           // loop       : fn  - 'synchronized rendering process'
           // channel    : fn  - 'handler for a "Channel"'
           // game       : fn  - 'handler for a "Game"'
@@ -632,6 +674,7 @@
           player        : obj - 'own user instance (writeable)'
           peers         : obj - 'list of connected players (readable)'
           data          : arr - 'shortcut to access peers.data + player.data'
+          sync          : obj - 'synchronized shared object'
           loop          : fn  - 'synchronized rendering process'
 
           // channel    : fn  - 'handler for a "Channel"'
@@ -672,6 +715,7 @@
           // player     : obj - 'own user instance (writeable)'
           // peers      : obj - 'list of connected players (readable)'
           // data       : arr - 'shortcut to access peers.data + player.data'
+          // sync       : obj - 'synchronized shared object'
           // loop       : fn  - 'synchronized rendering process'
 
 
@@ -709,7 +753,7 @@
       // with plain text
       pg.login( 'Autarc' );
 
-      // with a 3rd party service via OAuth
+      // later with a 3rd party service via OAuth
       pg.login( 'Autarc', 'Github' );
 
       </code></pre>
@@ -899,6 +943,13 @@
         player.posX = 1;
         player.keys = [ 'a', 'b', 'c', 'd' ];
 
+
+        // shared object betweeen all peers
+        pg.sync.state = 'start';
+
+        pg.sync.cookies = [];
+        pg.sync.cookies.push({ x: 100, y: 50, r: 20 });
+
       </code></pre>
 
     </div>
@@ -921,12 +972,12 @@
 
       <pre><code class="language-javascript">
 
-        /** automatic synchonisation **/
+        /** automatic synchronisation **/
+
+        // define internal reference
+        var entries = pg.data;
 
         pg.loop( function render ( dt ) {
-
-          // define internal reference
-          var entries = pg.data;
 
           for ( var i = 0, l = entries.length; i < l; i++ ) {
 
@@ -972,7 +1023,7 @@
         <li class="step">2.) setup room handler</li>
         <li class="step">3.) login - create user</li>
         <li class="step">4.) initialize the game</li>
-        <li class="step">5.) use pg.loop &amp; pg.data</li>
+        <li class="step">5.) use player, data &amp; sync</li>
       </ol>
 
     </div>
@@ -996,7 +1047,7 @@
         <li>2.) setup room handler</li>
         <li class="step">3.) login - create user</li>
         <li class="step">4.) initialize the game</li>
-        <li class="step">5.) use pg.loop &amp; pg.data</li>
+        <li class="step">5.) use player, data &amp; sync</li>
       </ol>
 
     </div>
@@ -1021,7 +1072,7 @@
         <li class="step-prev">2.) setup room handler</li>
         <li>3.) login - create user</li>
         <li class="step">4.) initialize the game</li>
-        <li class="step">5.) use pg.loop &amp; pg.data</li>
+        <li class="step">5.) use player, data &amp; sync</li>
       </ol>
 
     </div>
@@ -1045,7 +1096,7 @@
         <li class="step-prev">2.) setup room handler</li>
         <li class="step-prev">3.) login - create user</li>
         <li>4.) initialize the game</li>
-        <li class="step">5.) use pg.loop &amp; pg.data</li>
+        <li class="step">5.) use player, data &amp; sync</li>
       </ol>
 
     </div>
@@ -1070,7 +1121,7 @@
         <li class="step-prev">2.) setup room handler</li>
         <li class="step-prev">3.) login - create user</li>
         <li class="step-prev">4.) initialize the game</li>
-        <li>5.) use pg.loop &amp; pg.data</li>
+        <li>5.) use player, data &amp; sync</li>
       </ol>
 
     </div>
@@ -1281,7 +1332,7 @@
 
       <h3><a href="http://peergaming.net">peergaming.net</a></h3>
 
-      <p class="forum">Forum: <a href="http://www.html5gamedevs.com/forum/16-peergaming/">@html5gamedevs</a> </p>
+     <!--  <p class="forum">Forum: <a href="http://www.html5gamedevs.com/forum/16-peergaming/">@html5gamedevs</a> </p> -->
 
       <pre><code class="language-javascript">
 
