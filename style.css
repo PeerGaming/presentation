@@ -1,0 +1,158 @@
+/** global **/
+
+html, body {
+
+  margin  : 0;
+  padding : 0;
+  height  : 100%;
+}
+
+ul, ol {
+
+  margin    : 0;
+  padding   : 0;
+  list-style: none;
+}
+
+li { list-style: none; }
+
+a {
+
+  text-decoration   : none;
+
+  color             : #3311ff;
+
+  transition        : all 1s ease-in-out;
+}
+
+a:hover{ border-bottom: 2px solid #20605A; }
+
+
+
+figure > a { border-bottom: none !important; }
+
+figure > figurecaption { color: #aaa; }
+
+
+/**
+ *  Image
+ */
+
+img {
+
+  max-width : 100%;
+  max-height: 100%;
+
+  height: auto !important;
+
+  border: 1px solid #000;
+
+  border-radius: 10px;
+}
+
+
+/** re-use */
+
+
+.transition {
+
+  -webkit-transition: all 1s ease-in-out;
+     -moz-transition: all 1s ease-in-out;
+      -ms-transition: all 1s ease-in-out;
+       -o-transition: all 1s ease-in-out;
+          transition: all 1s ease-in-out;
+}
+
+
+.container {
+
+  height: 100%;
+  width : 100%;
+  background-color: #222;
+
+
+  font-size : 1.6em;
+
+  /*height: 80%;*/
+
+  display: -webkit-flex;
+  display:    -moz-flex;
+  display:     -ms-flex;
+  display:         flex;
+
+  -webkit-flex-direction: column;
+     -moz-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+
+  -webkit-justify-content: center;
+     -moz-justify-content: center;
+      -ms-justify-content: center;
+          justify-content: center;
+
+
+  text-align: center;
+}
+
+.wrap {
+
+  position: relative;
+  width: 100%;
+}
+
+.wrap:before, .wrap:after {
+  content: "";
+  display: table;
+}
+.wrap:after {
+  clear: both;
+}
+
+
+.main {
+
+  height        : 80%;
+  width         : 50%;
+  background    : #eee;
+
+  margin        : 0 auto;
+
+  padding       : 0 30px;
+
+  border        : 1px solid black;
+  border-radius : 10px;
+}
+
+
+
+/** specific **/
+
+.entry {
+
+  margin  : 20px;
+  padding : 10px 0;
+  width   : 500px;
+
+  border-top: 1px solid #333;
+  border-bottom: 1px solid #333;
+}
+
+
+.date  { float         : left; margin-right  : 10px; }
+.links { float         : right;}
+
+.list {
+  text-align: center;
+  margin: 0 auto;
+
+  width: 80%;
+}
+
+.clear:before, .clear:after {
+  content: "";
+  display: table;
+}
+
+.clear:after {
+  clear: both;
+}
