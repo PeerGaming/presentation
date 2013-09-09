@@ -19,10 +19,7 @@ li { list-style: none; }
 a {
 
   text-decoration   : none;
-
   color             : #3311ff;
-
-  transition        : all 1s ease-in-out;
 }
 
 a:hover{ border-bottom: 2px solid #20605A; }
@@ -53,7 +50,7 @@ img {
 
 /** re-use */
 
-
+/*
 .transition {
 
   -webkit-transition: all 1s ease-in-out;
@@ -61,7 +58,7 @@ img {
       -ms-transition: all 1s ease-in-out;
        -o-transition: all 1s ease-in-out;
           transition: all 1s ease-in-out;
-}
+}*/
 
 
 .container {
@@ -142,10 +139,10 @@ img {
 .links { float         : right;}
 
 .list {
-  text-align: center;
-  margin: 0 auto;
 
   width: 80%;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .clear:before, .clear:after {
