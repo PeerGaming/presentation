@@ -1,0 +1,1527 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en" id="PikSlides">
+<head>
+
+  <meta charset="utf-8">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta http-equiv="content-type" content="text/html,charset=utf-8" />
+
+  <title>:: PeerGaming ::</title>
+
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+  <link rel="stylesheet" type="text/css" href="../core/base.css" >
+  <link rel="stylesheet" type="text/css" href="vendor/prism/prism.css">
+  <link rel="stylesheet" type="text/css" href="vendor/google-webfont/font.css">
+  <link rel="stylesheet" type="text/css" href="vendor/icomoon/style.css">
+  <link rel="stylesheet" type="text/css" href="vendor/label.css/label.css">
+
+</head>
+<body>
+
+
+<!--   -->
+
+
+<div class="pikSlide part" id="Start">
+
+  <p class="js-slide-no"></p>
+
+  <div class="flex-container">
+
+    <div class="title">PeerGaming</div>
+
+    <div class="subtitle">Share the Fun</div>
+
+    <figure>
+
+      <img class="no-border" src="assets/pg-logo_v2.svg" height="100%" alt="PeerGaming"/>
+
+    </figure>
+
+    <div class="thesis">
+      Creating a Client-Side Multiplayer Gaming Framework for the Web,
+      which handles Distributed Logic on Multiple Systems in "Real-Time"
+    </div>
+
+
+  </div>
+
+</div>
+
+
+  <div class="pikSlide">
+
+    <p class="category"><span class="js-slide-no"></span> Overview</p>
+
+    <div class="flex-container">
+
+      <ul class="overview-list">
+        <li>Idea</li>
+        <li>Design</li>
+        <li>Code</li>
+      </ul>
+
+    </div>
+
+    <div class="pikNotes">
+      <p>vision for games - tech - working drafts - specs - API </p>
+    </div>
+
+  </div>
+
+
+
+<div class="pikSlide part">
+
+  <div class="flex-container">
+
+<!-- Foundations -->
+    <p class="title"><span class="js-slide-no"></span> Background</p>
+
+  </div>
+
+</div>
+
+
+  <!--  -->
+  <div class="pikSlide">
+
+    <p class="js-slide-no"></p>
+    <p class="category">Browser Based Games</p>
+
+    <div class="flex-container">
+
+      <p>Console + Mobile Market</p>
+
+      <p class="step">Plugins / Extensions</p>
+
+      <p class="step">Web Technologies</p>
+
+    </div>
+
+    <div class="pikNotes">
+      <p>P2P interesting on mobile - see flash frameworks - access direct != server relay</p>
+    </div>
+
+  </div>
+
+
+  <div class="pikSlide">
+
+    <p class="category"><span class="js-slide-no"></span> Browser Based Games</p>
+
+    <div class="flex-container">
+
+      <p class="step-prev">Console + Mobile Market</p>
+
+      <p>Plugins / Extensions</p>
+
+      <p class="step">Web Technologies</p>
+
+    </div>
+
+    <div class="pikNotes">
+      <p>single player - mostly casual games + prototypes</p>
+    </div>
+
+  </div>
+
+
+
+  <div class="pikSlide">
+
+    <p class="category"><span class="js-slide-no"></span> Browser Based Games</p>
+
+    <div class="flex-container">
+
+      <p class="step-prev">Console + Mobile Market</p>
+
+      <p class="step-prev">Plugins / Extensions</p>
+
+      <p>Web Technologies</p>
+
+    </div>
+
+    <div class="pikNotes">
+      <p>JavaScript usable with DOM - Canvas - WebGL & Co. + CSS & HTML</p>
+    </div>
+
+  </div>
+
+
+
+
+  <!--  -->
+  <div class="pikSlide">
+
+    <p class="js-slide-no"></p>
+    <p class="category">Multiplayer</p>
+
+    <div class="flex-container">
+
+      <p>XHR-Polling or WebSockets</p>
+
+      <p class="step">Client-Server Architecture</p>
+
+      <figure class="step">
+
+        <img src="assets/Client-Server.png" width="60%"/>
+
+      </figure>
+
+    </div>
+
+    <div class="pikNotes">
+      <p>sending and receiving messages - streams</p>
+    </div>
+
+  </div>
+
+
+
+  <div class="pikSlide">
+
+    <p class="category"><span class="js-slide-no"></span> Multiplayer</p>
+
+    <div class="flex-container">
+
+      <p class="step-prev">XHR-Polling or WebSockets</p>
+
+      <p>Client-Server Architecture</p>
+
+      <figure>
+
+        <img src="assets/Client-Server.png" width="60%" alt="Client Server Architectures"/>
+
+      </figure>
+
+    </div>
+
+    <div class="pikNotes">
+      <p>additional costs - require another system - technology - maintenance</p>
+    </div>
+
+  </div>
+
+  <!--  -->
+
+  <div class="pikSlide">
+
+      <p class="category"><span class="js-slide-no"></span> Evolution</p>
+
+      <div class="flex-container">
+
+        <figure>
+
+          <img src="assets/the-path-to-webrtc.jpg" height="100%" alt="Path to WebRTC"/>
+
+          <figurecaption>Graphic by Jimmy Lee / jimmylee.info</figurecaption>
+
+        </figure>
+
+      </div>
+
+      <div class="pikNotes">
+        <p>request - AJAX - WebSocket - UDP (!)</p>
+      </div>
+
+  </div>
+
+
+
+  <div class="pikSlide">
+
+    <p class="js-slide-no"></p>
+    <p class="category">Technology</p>
+
+    <div class="flex-container">
+
+      <h2><a href="http://www.webrtc.org/">WebRTC</a></h2>
+
+      <ul class="arrow-list">
+        <li class="step"><span aria-hidden="true" data-icon="&#xe002;"></span></li>
+        <li class="step"><span aria-hidden="true" data-icon="&#xe001;"></span></li>
+        <li class="step"><span aria-hidden="true" data-icon="&#xe000;"></span></li>
+      </ul>
+
+      <ul class="component-list">
+        <li class="step"><a href="http://docs.webplatform.org/wiki/apis/webrtc/RTCPeerConnection#Summary">PeerConnection</a></li>
+        <li class="step"><a href="http://docs.webplatform.org/wiki/apis/webrtc/MediaStream#Summary">MediaStream</a></li>
+        <li class="step"><a href="http://docs.webplatform.org/wiki/apis/webrtc/RTCDataChannel#Summary">DataChannel</a></li>
+      </ul>
+
+    </div>
+
+    <div class="pikNotes">
+      <p>Web Real-Time Communication / components - not all browsers</p>
+    </div>
+
+  </div>
+
+
+
+  <div class="pikSlide">
+
+    <p class="js-slide-no"></p>
+    <p class="category">Technology</p>
+
+    <div class="flex-container">
+
+      <h2><a href="http://www.webrtc.org/">WebRTC</a></h2>
+
+      <ul class="arrow-list">
+        <li><span aria-hidden="true" data-icon="&#xe002;"></span></li>
+        <li class="step"><span aria-hidden="true" data-icon="&#xe001;"></span></li>
+        <li class="step"><span aria-hidden="true" data-icon="&#xe000;"></span></li>
+      </ul>
+
+      <ul class="component-list">
+        <li><a href="http://docs.webplatform.org/wiki/apis/webrtc/RTCPeerConnection#Summary">PeerConnection</a></li>
+        <li class="step"><a href="http://docs.webplatform.org/wiki/apis/webrtc/MediaStream#Summary">MediaStream</a></li>
+        <li class="step"><a href="http://docs.webplatform.org/wiki/apis/webrtc/RTCDataChannel#Summary">DataChannel</a></li>
+      </ul>
+
+    </div>
+
+    <div class="pikNotes">
+      <p>establish connections - JSEP - create answer/offer - SDP</p>
+    </div>
+
+  </div>
+
+
+
+
+  <div class="pikSlide">
+
+    <p class="js-slide-no"></p>
+    <p class="category">Technology</p>
+
+    <div class="flex-container">
+
+      <h2><a href="http://www.webrtc.org/">WebRTC</a></h2>
+
+      <ul class="arrow-list">
+        <li class="step-prev"><span aria-hidden="true" data-icon="&#xe002;"></span></li>
+        <li><span aria-hidden="true" data-icon="&#xe001;"></span></li>
+        <li class="step"><span aria-hidden="true" data-icon="&#xe000;"></span></li>
+      </ul>
+
+      <ul class="component-list">
+        <li><a class="step-prev" href="http://docs.webplatform.org/wiki/apis/webrtc/RTCPeerConnection#Summary">PeerConnection</a></li>
+        <li><a href="http://docs.webplatform.org/wiki/apis/webrtc/MediaStream#Summary">MediaStream</a></li>
+        <li class="step"><a href="http://docs.webplatform.org/wiki/apis/webrtc/RTCDataChannel#Summary">DataChannel</a></li>
+      </ul>
+
+    </div>
+
+    <div class="pikNotes">
+      <p>access sensors - currently camera - audio/video - allow VOIP</p>
+    </div>
+
+  </div>
+
+
+
+
+  <div class="pikSlide">
+
+    <p class="category"><span class="js-slide-no"></span> Technology</p>
+
+    <div class="flex-container">
+
+      <h2><a href="http://www.webrtc.org/">WebRTC</a></h2>
+
+      <ul class="arrow-list">
+        <li class="step-prev"><span aria-hidden="true" data-icon="&#xe002;"></span></li>
+        <li class="step-prev"><span aria-hidden="true" data-icon="&#xe001;"></span></li>
+        <li><span aria-hidden="true" data-icon="&#xe000;"></span></li>
+      </ul>
+
+      <ul class="component-list">
+        <li><a class="step-prev" href="http://docs.webplatform.org/wiki/apis/webrtc/RTCPeerConnection#Summary">PeerConnection</a></li>
+        <li><a class="step-prev" href="http://docs.webplatform.org/wiki/apis/webrtc/MediaStream#Summary">MediaStream</a></li>
+        <li><a href="http://docs.webplatform.org/wiki/apis/webrtc/RTCDataChannel#Summary">DataChannel</a></li>
+      </ul>
+
+    </div>
+
+    <div class="pikNotes">
+      <p>arbitary data - text messages - binary</p>
+    </div>
+
+  </div>
+
+
+  <!--  -->
+
+
+<!-- // Features, Aspects -->
+<div class="pikSlide part">
+
+  <div class="flex-container">
+
+    <!-- Structure -->
+    <p class="title"><span class="js-slide-no"></span> Concept</p>
+
+  </div>
+
+</div>
+
+
+
+  <!--  -->
+
+  <div class="pikSlide">
+
+    <p class="js-slide-no"></p>
+    <p class="category">Features</p>
+
+    <div class="flex-container">
+
+      <p>standalone</p>
+
+      <p class="step">configurable</p>
+
+      <p class="step">simple</p>
+
+    </div>
+
+    <div class="pikNotes">
+      <p>no dependencies - agnostic - usable with different gaming frameworks</p>
+    </div>
+
+  </div>
+
+
+  <div class="pikSlide">
+
+    <p class="js-slide-no"></p>
+    <p class="category">Features</p>
+
+    <div class="flex-container">
+
+      <p class="step-prev">standalone</p>
+
+      <p>configurable</p>
+
+      <p class="step">simple</p>
+
+    </div>
+
+    <div class="pikNotes">
+      <p>customizable - see serverless or own server - complex setups possible</p>
+    </div>
+
+  </div>
+
+
+
+
+  <div class="pikSlide">
+
+    <p class="category"><span class="js-slide-no"></span> Features</p>
+
+    <div class="flex-container">
+
+      <p class="step-prev">standalone</p>
+
+      <p class="step-prev">configurable</p>
+
+      <p>simple</p>
+
+    </div>
+
+    <div class="pikNotes">
+      <p>default settings - easy local tinkering - provide test server - fast convertion</p>
+    </div>
+
+  </div>
+
+
+
+
+  <!--  -->
+
+
+  <div class="pikSlide">
+
+    <p class="category"><span class="js-slide-no"></span> Communication</p>
+
+    <div class="flex-container">
+
+      <h3><a href="http://tools.ietf.org/html/rfc5245">ICE</a> / <a href="http://tools.ietf.org/html/draft-ietf-rtcweb-jsep-03">JSEP</a></h3>
+
+      <figure>
+
+        <img src="assets/ICE-Address.png" width="80%" alt="ICE Address"/>
+
+      </figure>
+
+    </div>
+
+    <div class="pikNotes">
+      <p></p>
+    </div>
+
+  </div>
+
+
+
+  <div class="pikSlide">
+
+    <p class="category"><span class="js-slide-no"></span> Communication</p>
+
+    <div class="flex-container">
+
+      <h3><a href="http://tools.ietf.org/html/rfc5245">ICE</a> / <a href="http://tools.ietf.org/html/draft-ietf-rtcweb-jsep-03">JSEP</a></h3>
+
+      <figure>
+
+        <img src="assets/ICE-Exchange.png" width="80%" alt="ICE Exchange"/>
+
+      </figure>
+
+    </div>
+
+    <div class="pikNotes">
+      <p></p>
+    </div>
+
+  </div>
+
+
+
+
+  <div class="pikSlide">
+
+    <p class="category"><span class="js-slide-no"></span> Communication</p>
+
+    <div class="flex-container">
+
+      <h3><a href="http://tools.ietf.org/html/rfc5245">ICE</a> / <a href="http://tools.ietf.org/html/draft-ietf-rtcweb-jsep-03">JSEP</a></h3>
+
+      <figure>
+
+        <img src="assets/ICE-Connect.png" width="80%" alt="ICE Connect"/>
+
+      </figure>
+
+    </div>
+
+    <div class="pikNotes">
+      <p></p>
+    </div>
+
+  </div>
+
+  <!--  -->
+
+
+
+
+  <div class="pikSlide">
+
+    <p class="category"><span class="js-slide-no"></span> Topology</p>
+
+    <div class="flex-container">
+
+      <h3>
+        <span class="topology">Full Mesh</span>
+        <span aria-hidden="true" data-icon="&#xf061;"></span>
+        <span class="topology">1 : N</span>
+      </h3>
+
+      <figure>
+
+        <img src="assets/Full-Connected-Mesh.png" width="50%" alt="Full-Connected-Mesh"/>
+
+      </figure>
+
+    </div>
+
+    <div class="pikNotes">
+      <p></p>
+    </div>
+
+  </div>
+
+
+
+  <div class="pikSlide">
+
+    <p class="category"><span class="js-slide-no"></span> Subnetting</p>
+
+    <div class="flex-container">
+
+      <h3>User Flow</h3>
+
+      <figure>
+
+        <img src="assets/User-Flow.png" width="40%" alt="User-Flow"/>
+
+      </figure>
+
+    </div>
+
+    <div class="pikNotes">
+      <p></p>
+    </div>
+
+  </div>
+
+
+  <div class="pikSlide">
+
+    <p class="category"><span class="js-slide-no"></span> Data</p>
+
+    <div class="flex-container">
+
+      <h3>Types</h3>
+
+      <figure>
+
+        <img src="assets/Data-Types.png" width="80%" alt="Data Types"/>
+
+      </figure>
+
+    </div>
+
+    <div class="pikNotes">
+      <p></p>
+    </div>
+
+  </div>
+
+
+<!-- // Features, Aspects -->
+<div class="pikSlide part">
+
+  <div class="flex-container">
+
+    <p class="title"><span class="js-slide-no"></span> Implementation</p>
+
+  </div>
+
+</div>
+
+
+  <div class="pikSlide">
+
+    <p class="js-slide-no"></p>
+    <p class="category">Components</p>
+
+    <div class="flex-container">
+
+      <div class="pos-code">
+        <pre><code class="language-javascript">
+
+        /** API Overview **/
+
+        var pg = {
+
+          noConflict    : fn  - 'reset namespace'
+          VERSION       : obj - 'refers to the current version'
+          info          : obj - 'information about the state'
+
+
+          // config     : fn  - 'configuration for the network'
+          // watch      : fn  - 'notifications by internal events'
+          // login      : fn  - 'set identifier and create player'
+          // routes     : fn  - 'define default and custom routes'
+          // channel    : fn  - 'handler for a "Channel"'
+          // game       : fn  - 'handler for a "Game"'
+          // player     : obj - 'own user instance (writeable)'
+          // peers      : obj - 'list of connected players (readable)'
+          // data       : arr - 'shortcut to access peers.data + player.data'
+          // sync       : obj - 'synchronized shared object'
+          // loop       : fn  - 'synchronized rendering process'
+        };
+        </code></pre>
+      </div>
+
+    </div>
+
+    <div class="pikNotes">
+      <p>information - misc</p>
+    </div>
+
+  </div>
+
+
+
+
+
+  <div class="pikSlide">
+
+    <p class="js-slide-no"></p>
+    <p class="category">Components</p>
+
+    <div class="flex-container">
+
+      <div class="pos-code">
+        <pre><code class="language-javascript">
+
+        /** API Overview **/
+
+        var pg = {
+
+          // noConflict : fn  - 'reset namespace'
+          // VERSION    : obj - 'refers to the current version'
+          // info       : obj - 'information about the state'
+
+          config        : fn  - 'configuration for the network'
+          watch         : fn  - 'notifications by internal events'
+          login         : fn  - 'set identifier and create player'
+          routes        : fn  - 'define default and custom routes'
+          channel       : fn  - 'handler for a "Channel"'
+          game          : fn  - 'handler for a "Game"'
+
+          // player     : obj - 'own user instance (writeable)'
+          // peers      : obj - 'list of connected players (readable)'
+          // data       : arr - 'shortcut to access peers.data + player.data'
+          // sync       : obj - 'synchronized shared object'
+          // loop       : fn  - 'synchronized rendering process'
+        };
+        </code></pre>
+      </div>
+
+    </div>
+
+    <div class="pikNotes">
+      <p>options - internal settings - meta</p>
+    </div>
+
+  </div>
+
+
+
+  <div class="pikSlide">
+
+    <p class="js-slide-no"></p>
+    <p class="category">Components</p>
+
+    <div class="flex-container">
+
+      <div class="pos-code">
+        <pre><code class="language-javascript">
+
+        /** API Overview **/
+
+        var pg = {
+
+          // noConflict : fn  - 'reset namespace'
+          // VERSION    : obj - 'refers to the current version'
+          // info       : obj - 'information about the state'
+          // config     : fn  - 'configuration for the network'
+          // watch      : fn  - 'notifications by internal events'
+          // login      : fn  - 'set identifier and create player'
+          // routes     : fn  - 'define default and custom routes'
+          // channel    : fn  - 'handler for a "Channel"'
+          // game       : fn  - 'handler for a "Game"'
+
+
+          player        : obj - 'own user instance (writeable)'
+          peers         : obj - 'list of connected players (readable)'
+          data          : arr - 'shortcut to access peers.data + player.data'
+          sync          : obj - 'synchronized shared object'
+          loop          : fn  - 'synchronized rendering process'
+        };
+        </code></pre>
+      </div>
+
+    </div>
+
+    <div class="pikNotes">
+      <p>game elements</p>
+    </div>
+
+  </div>
+
+  <!--  -->
+
+  <div class="pikSlide">
+
+    <p class="js-slide-no"></p>
+    <p class="category">Meta</p>
+
+    <div class="flex-container">
+
+      <h3>Account</h3>
+
+      <pre><code class="language-javascript">
+
+      /** define a name through user input **/
+
+      // with plain text
+      pg.login( 'Autarc' );
+
+      // later with a 3rd party service via OAuth
+      pg.login( 'Autarc', 'Github' );
+
+      </code></pre>
+
+    </div>
+
+    <div class="pikNotes">
+      <p>routing specific for different rooms - accounts / OAuth ?</p>
+    </div>
+
+  </div>
+
+
+
+  <div class="pikSlide">
+
+    <p class="category"><span class="js-slide-no"></span> Meta</p>
+
+    <div class="flex-container">
+
+      <h3>Rooms = Channel / Game</h3>
+
+      <pre><code class="language-javascript">
+
+      /**
+       *  default scheme:
+       *
+       *    channel - 1 parameter || http://{HOST}.{TLD}/#!/{channel}/
+       *    game    - 2 parameter || http://{HOST}.{TLD}/#!/{channel}/{id}/
+       */
+
+      // example for a game
+      http://peergaming.net/pg-catch/42
+
+      // handle game events
+      pg.game( 'pg-catch', function ( game ) {
+
+        game.on('enter', function ( peer ) { ... });
+
+      });
+
+      </code></pre>
+
+    </div>
+
+    <div class="pikNotes">
+      <p>routing specific for different rooms - accounts / OAuth
+        optional ID ( or general) - handler creation follow node pattern</p>
+    </div>
+
+  </div>
+
+
+<!-- Network -->
+
+  <!--  -->
+  <div class="pikSlide">
+
+    <p class="js-slide-no"></p>
+    <p class="category">Contact</p>
+
+    <div class="flex-container">
+
+      <h3>PeerList (Server)</h3>
+
+      <pre><code class="language-javascript">
+
+      /** select a random peer for the initial connection **/
+
+      // addr: 'pg-catch/42',
+      // id  : 'a1097e1f-4d28-4695-b7ac-0e399690040e'
+
+      function getPartner ( addr, id ) {
+
+        var keys = Object.keys( rooms[ addr ] ),
+            partnerID = null;
+
+        if ( keys.length > 1 ) partnerID = keys[(Math.random() * keys.length)|0];
+        return ( partnerID !== id ) ? partnerID : this.getPartner( addr, id );
+      }
+
+      </code></pre>
+
+    </div>
+
+    <div class="pikNotes">
+      <p>user get IDs - automatic brookering - pick a fitting partner depending</p>
+    </div>
+
+  </div>
+
+
+  <div class="pikSlide">
+
+    <p class="js-slide-no"></p>
+    <p class="category">Contact</p>
+
+    <div class="flex-container">
+
+      <h3>PeerRouting (P2P)</h3>
+
+      <pre><code class="language-javascript">
+      /** use brokering for new connections **/
+
+      function send ( action, data ) {
+
+        var remote = this.info.remote;
+
+        // use an already known peer
+        if ( this.info.transport ) {
+          var proxy = { action: action, local: instance.id, remote: remote };
+          return this.info.transport.send( 'register', data, proxy );
+        }
+
+        // send via server
+        socket.send({ action: action, data: data, remote: remote });
+      }
+      </code></pre>
+
+    </div>
+
+    <div class="pikNotes">
+      <p>after initial connection - other peers are proxies - as 1:1 topology</p>
+    </div>
+
+  </div>
+
+
+
+  <div class="pikSlide">
+
+    <p class="category"><span class="js-slide-no"></span> Contact</p>
+
+    <div class="flex-container">
+
+      <h3><i>** manually **</i></h3>
+
+      <pre><code class="language-javascript">
+
+      /** alternative hook for custom handling the credential exchange **/
+
+      pg.config.noServer( function ( msg, conn ) {
+
+        // show own information ( iceCandidates, SDP packages )
+        document.body.innerHTML += msg.type + ':' + msg.data;
+
+        // reference to add a partners configurations
+        function setOwnCredentials( msg ) {
+          conn.set( msg.type, msg.data );
+        }
+
+      });
+
+      </code></pre>
+
+    </div>
+
+    <div class="pikNotes">
+      <p>complete serverless - handle credentials exchange by the user - 3rd party transport</p>
+    </div>
+
+  </div>
+
+  <!--  -->
+
+
+  <div class="pikSlide">
+
+    <p class="category"><span class="js-slide-no"></span> Setup</p>
+
+    <div class="flex-container">
+
+      <h3>PeerChain</h3>
+
+      <figure>
+
+        <img src="assets/PeerChain-1.png" width="80%" alt="PeerChain (1)"/>
+
+      </figure>
+
+    </div>
+
+    <div class="pikNotes">
+      <p>Peer Chain</p>
+    </div>
+
+  </div>
+
+
+
+  <div class="pikSlide">
+
+    <p class="category"><span class="js-slide-no"></span> Setup</p>
+
+    <div class="flex-container">
+
+      <h3>PeerChain</h3>
+
+      <figure>
+
+        <img src="assets/PeerChain-2.png" width="80%" alt="PeerChain (2)"/>
+
+      </figure>
+
+    </div>
+
+    <div class="pikNotes">
+      <p>Peer Chain</p>
+    </div>
+
+  </div>
+
+
+
+
+  <div class="pikSlide">
+
+    <p class="category"><span class="js-slide-no"></span> Setup</p>
+
+    <div class="flex-container">
+
+      <h3>PeerChain</h3>
+
+      <figure>
+
+        <img src="assets/PeerChain-3.png" width="80%" alt="PeerChain (3)"/>
+
+      </figure>
+
+    </div>
+
+    <div class="pikNotes">
+      <p>Peer Chain</p>
+    </div>
+
+  </div>
+
+
+
+
+  <div class="pikSlide">
+
+    <p class="category"><span class="js-slide-no"></span> Setup</p>
+
+    <div class="flex-container">
+
+      <h3>PeerChain</h3>
+
+      <figure>
+
+        <img src="assets/PeerChain-4.png" width="80%" alt="PeerChain (4)"/>
+
+      </figure>
+
+    </div>
+
+    <div class="pikNotes">
+      <p>Peer Chain</p>
+    </div>
+
+  </div>
+
+
+
+
+  <div class="pikSlide">
+
+    <p class="category"><span class="js-slide-no"></span> Setup</p>
+
+    <div class="flex-container">
+
+      <h3>PeerChain</h3>
+
+      <figure>
+
+        <img src="assets/PeerChain-5.png" width="80%" alt="PeerChain (5)"/>
+
+      </figure>
+
+    </div>
+
+    <div class="pikNotes">
+      <p>Peer Chain / Bootstrapping</p>
+    </div>
+
+  </div>
+
+
+
+
+
+  <!--  -->
+
+  <div class="pikSlide">
+
+    <p class="js-slide-no"></p>
+    <p class="category">Game</p>
+
+    <div class="flex-container">
+
+      <h3>Reactive Data</h3>
+
+      <pre><code class="language-javascript">
+
+        /** using getter & setter for values **/
+
+        // define internal reference
+        var player = pg.player.data;
+
+        player.posX = 1;
+        player.keys = [ 'a', 'b', 'c', 'd' ];
+
+
+        // shared object betweeen all peers
+        pg.sync.state = 'start';
+
+        pg.sync.cookies = [];
+        pg.sync.cookies.push({ x: 100, y: 50, r: 20 });
+
+      </code></pre>
+
+    </div>
+
+    <div class="pikNotes">
+      <p>simple value definition - getter/setter - no RPC or function call required
+         declerative approach</p>
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+  <div class="pikSlide">
+
+    <p class="category"><span class="js-slide-no"></span> Information</p>
+
+    <div class="flex-container">
+
+      <h3>Synchronized</h3>
+
+      <figure>
+
+        <img src="assets/Sync-Request.png" width="80%" alt="Sync Request"/>
+
+      </figure>
+
+    </div>
+
+    <div class="pikNotes">
+      <p></p>
+    </div>
+
+  </div>
+
+
+
+  <div class="pikSlide">
+
+    <p class="category"><span class="js-slide-no"></span> Information</p>
+
+    <div class="flex-container">
+
+      <h3>Synchronized</h3>
+
+      <figure>
+
+        <img src="assets/Sync-Confirm.png" width="80%" alt="Sync Confirm"/>
+
+      </figure>
+
+    </div>
+
+    <div class="pikNotes">
+      <p></p>
+    </div>
+
+  </div>
+
+
+
+  <div class="pikSlide">
+
+    <p class="category"><span class="js-slide-no"></span> Information</p>
+
+    <div class="flex-container">
+
+      <h3>Synchronized</h3>
+
+      <figure>
+
+        <img src="assets/Sync-Resync.png" width="80%" alt="Sync Resync"/>
+
+      </figure>
+
+    </div>
+
+    <div class="pikNotes">
+      <p></p>
+    </div>
+
+  </div>
+
+
+
+  <!--  -->
+
+  <div class="pikSlide">
+
+    <p class="category"><span class="js-slide-no"></span> Game</p>
+
+    <div class="flex-container">
+
+      <h3>Synchronized Rendering</h3>
+
+      <pre><code class="language-javascript">
+
+        /** automatic synchronisation **/
+
+        // define internal reference
+        var entries = pg.data;
+
+        pg.loop( function render ( dt ) {
+
+          for ( var i = 0, l = entries.length; i < l; i++ ) {
+
+            console.log( entries[i] );
+          }
+
+        });
+
+      </code></pre>
+
+    </div>
+
+    <div class="pikNotes">
+      <p>automatic sync - avoids collision - allows 'proper' network handling</p>
+    </div>
+
+  </div>
+
+  <!--  -->
+
+
+<div class="pikSlide part">
+
+  <div class="flex-container">
+
+    <p class="title"><span class="js-slide-no"></span> Example</p>
+
+  </div>
+
+</div>
+
+
+  <!--  -->
+  <div class="pikSlide">
+
+    <p class="js-slide-no"></p>
+    <p class="category">Quick Start</p>
+
+    <div class="flex-container">
+
+      <ol class="step-list">
+        <li>1.) include script tag</li>
+        <li class="step">2.) setup room handler</li>
+        <li class="step">3.) login - create user</li>
+        <li class="step">4.) initialize the game</li>
+        <li class="step">5.) use player, data &amp; sync</li>
+      </ol>
+
+    </div>
+
+    <div class="pikNotes">
+      <p>library - single file - namespace 'pg'</p>
+    </div>
+
+  </div>
+
+
+  <div class="pikSlide">
+
+    <p class="js-slide-no"></p>
+    <p class="category">Quick Start</p>
+
+    <div class="flex-container">
+
+      <ol class="step-list">
+        <li class="step-prev">1.) include script tag</li>
+        <li>2.) setup room handler</li>
+        <li class="step">3.) login - create user</li>
+        <li class="step">4.) initialize the game</li>
+        <li class="step">5.) use player, data &amp; sync</li>
+      </ol>
+
+    </div>
+
+    <div class="pikNotes">
+      <p>channel/game interaction - hook to change behavior on connection</p>
+    </div>
+
+  </div>
+
+
+
+  <div class="pikSlide">
+
+    <p class="js-slide-no"></p>
+    <p class="category">Quick Start</p>
+
+    <div class="flex-container">
+
+      <ol class="step-list">
+        <li class="step-prev">1.) include script tag</li>
+        <li class="step-prev">2.) setup room handler</li>
+        <li>3.) login - create user</li>
+        <li class="step">4.) initialize the game</li>
+        <li class="step">5.) use player, data &amp; sync</li>
+      </ol>
+
+    </div>
+
+    <div class="pikNotes">
+      <p>identifier - defined by the dev - plain name or OAuth</p>
+    </div>
+
+  </div>
+
+
+  <div class="pikSlide">
+
+    <p class="js-slide-no"></p>
+    <p class="category">Quick Start</p>
+
+    <div class="flex-container">
+
+      <ol class="step-list">
+        <li class="step-prev">1.) include script tag</li>
+        <li class="step-prev">2.) setup room handler</li>
+        <li class="step-prev">3.) login - create user</li>
+        <li>4.) initialize the game</li>
+        <li class="step">5.) use player, data &amp; sync</li>
+      </ol>
+
+    </div>
+
+    <div class="pikNotes">
+      <p>call to start the game - configure - reset the states/data</p>
+    </div>
+
+  </div>
+
+
+
+
+  <div class="pikSlide">
+
+    <p class="category"><span class="js-slide-no"></span> Quick Start</p>
+
+    <div class="flex-container">
+
+      <ol class="step-list">
+        <li class="step-prev">1.) include script tag</li>
+        <li class="step-prev">2.) setup room handler</li>
+        <li class="step-prev">3.) login - create user</li>
+        <li class="step-prev">4.) initialize the game</li>
+        <li>5.) use player, data &amp; sync</li>
+      </ol>
+
+    </div>
+
+    <div class="pikNotes">
+      <p>loop - update / draw - shortcut for pg.peers</p>
+    </div>
+
+  </div>
+
+
+
+  <div class="pikSlide">
+
+    <p class="category"><span class="js-slide-no"></span> Demo</p>
+
+    <div class="flex-container">
+
+      <h3><a href="assets/record2.mp4">pg-catch</a></h3>
+      <!-- <h3><a href="http://demo.peergaming.net">pg-catch</a></h3> -->
+
+      <p class="temp">http://demo.peergaming.net</p>
+
+      <!-- <a href="https://code.google.com/p/webrtc/issues/detail?id=2270#c8">SCTP DataChannel Transfer</a> -->
+      <p>"<a href="https://code.google.com/p/webrtc/issues/detail?id=2270#c8">Issue 2270</a>:  Sending binary data fails using Chrome with SCTP data channels enabled"</p>
+
+      <!-- unfortunatly ermentn updates, like you can read here ->
+
+      therefore I just like to show you || realisde that evergreen browser which automatically update
+      themself can be also have disadvabtage (at least if the implementation is not stable)
+       -->
+
+    </div>
+
+    <div class="pikNotes">
+      <p>lobby - 1.) open without script - 2.) add script show synced game</p>
+    </div>
+
+  </div>
+
+
+  <div class="pikSlide">
+
+    <p class="category"><span class="js-slide-no"></span> Plans</p>
+
+    <div class="flex-container">
+
+      <ul>
+        <li>reliable transfer</li>
+        <li class="step">interoperability</li>
+        <li class="step">local development</li>
+        <li class="step">room options</li>
+        <li class="step">custom handler</li>
+      </ul>
+
+    </div>
+
+    <div class="pikNotes">
+      <p>M29 - M31 adjustment of SRTP implementation</p>
+    </div>
+
+  </div>
+
+
+
+
+
+  <div class="pikSlide">
+
+    <p class="category"><span class="js-slide-no"></span> Plans</p>
+
+    <div class="flex-container">
+
+      <ul>
+        <li class="step-prev">reliable transfer</li>
+        <li>interoperability</li>
+        <li class="step">local development</li>
+        <li class="step">room options</li>
+        <li class="step">custom handler</li>
+      </ul>
+
+    </div>
+
+    <div class="pikNotes">
+      <p>chrome - firefox matchup</p>
+    </div>
+
+  </div>
+
+
+
+
+
+  <div class="pikSlide">
+
+    <p class="category"><span class="js-slide-no"></span> Plans</p>
+
+    <div class="flex-container">
+
+      <ul>
+        <li class="step-prev">reliable transfer</li>
+        <li class="step-prev">interoperability</li>
+        <li>local development</li>
+        <li class="step">room options</li>
+        <li class="step">custom handler</li>
+      </ul>
+
+    </div>
+
+    <div class="pikNotes">
+      <p>local system - using webstorage - worker</p>
+    </div>
+
+  </div>
+
+
+
+
+  <div class="pikSlide">
+
+    <p class="category"><span class="js-slide-no"></span> Plans</p>
+
+    <div class="flex-container">
+
+      <ul>
+        <li class="step-prev">reliable transfer</li>
+        <li class="step-prev">interoperability</li>
+        <li class="step-prev">local development</li>
+        <li>room options</li>
+        <li class="step">custom handler</li>
+      </ul>
+
+    </div>
+
+    <div class="pikNotes">
+      <p>restriction - watchable - password protection</p>
+    </div>
+
+  </div>
+
+
+  <div class="pikSlide">
+
+    <p class="category"><span class="js-slide-no"></span> Plans</p>
+
+    <div class="flex-container">
+
+      <ul>
+        <li class="step-prev">reliable transfer</li>
+        <li class="step-prev">interoperability</li>
+        <li class="step-prev">local development</li>
+        <li class="step-prev">room options</li>
+        <li>custom handler</li>
+      </ul>
+
+    </div>
+
+    <div class="pikNotes">
+      <p>RPC function calls</p>
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+  <!--  -->
+
+
+<div class="pikSlide part">
+
+  <div class="flex-container">
+
+    <div class="title">Questions</div>
+
+  </div>
+
+</div>
+
+
+<!--  -->
+
+
+<script src="../core/pik7.js"></script>
+<script src="vendor/prism/prism.js"></script>
+
+<script src="custom.js"></script>
+<script src="credits.js"></script>
+
+</body>
+</html>
